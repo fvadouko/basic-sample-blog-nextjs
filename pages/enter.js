@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import SignInButton from "../components/SignInButton";
 import SignOutButton from "../components/SignOutButton";
 import UsernameForm from "../components/UsernameForm";
+import SignInButton from "../components/SignInButton";
 import { UserContext } from "../lib/context";
 
 export default function Enter(props) {

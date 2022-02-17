@@ -69,7 +69,7 @@ function PostForm({ defaultValues, postRef, preview }) {
     mode: "onChange",
   });
 
-  const { isValid, isDirty } = formState;
+  const { isValid } = formState;
 
   const updatePost = async ({ content, published }) => {
     await postRef.update({
@@ -114,11 +114,7 @@ function PostForm({ defaultValues, postRef, preview }) {
         {errors.content && (
           <p className="text-danger">{errors.content.message}</p>
         )}
-        <button
-          type="submit"
-          className="btn-green"
-          disabled={!isDirty || !isValid}
-        >
+        <button type="submit" className="btn-green" disabled={!isValid}>
           Save Changes
         </button>
       </div>

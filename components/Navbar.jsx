@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         <li>
-          <Link href="/">
+          <Link href="/" passHref>
             <button className="btn-logo">FEED ARTICLES</button>
           </Link>
         </li>
@@ -18,13 +18,13 @@ const Navbar = () => {
         {username && (
           <>
             <li className="push-left">
-              <Link href="/admin">
+              <Link href="/admin" passHref>
                 <button className="btn-blue">Write Posts</button>
               </Link>
             </li>
             <li>
-              <Link href={`/${username}`}>
-                <img src={user?.photoURL} />
+              <Link href={`/${username}`} passHref>
+                <img src={user?.photoURL} alt="image-from-franck-adouko" />
               </Link>
             </li>
           </>

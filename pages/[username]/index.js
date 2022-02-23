@@ -37,9 +37,17 @@ export async function getServerSideProps({ query }) {
 export default function UserProfilePage({ user, posts }) {
   return (
     <main>
-      <UserProfile user={user} />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <UserProfile user={user} />
+        <SignOutButton />
+      </div>
       <PostFeed posts={posts} />
-      <SignOutButton />
     </main>
   );
 }
